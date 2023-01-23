@@ -45,3 +45,5 @@ else {
     -Join ($char + $special + $num | Get-Random -Count $stringLength | ForEach-Object {[char]$_})
 }
 }
+
+createPassword
