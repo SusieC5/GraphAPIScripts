@@ -2,9 +2,9 @@ function createPassword {
 
     # set length of password and number of special characters/numbers you want in it. Rest of password will be made of random upper/lowercase letters
     param (
-        $stringLength = 14,
-        $numLength = 3,
-        $specialCharLength = 2,
+        $stringLength,
+        $numLength,
+        $specialCharLength,
         $charLength = $stringLength - $numLength - $specialCharLength
     )
     
@@ -46,4 +46,10 @@ else {
 }
 }
 
-createPassword
+<# enter paramenters:
+ -stringLength (total of characters in password)
+ -numLength (number of numbers ranging 0-9) 
+ -specialCharLength (number of special characters that include: !"#$%&'()*+.-./:;<=>?@)
+ *If no numbers or special characters needed, enter 0
+ #>
+createPassword -stringLength 14 -numLength 3 -specialCharLength 2
